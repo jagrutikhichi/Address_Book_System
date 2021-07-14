@@ -8,10 +8,8 @@ public class AddressBook {
 
 	public void add() {
 
-		
-		
-		//Takes input from user
-		
+		// Takes input from user
+
 		System.out.println("Enter First Name: ");
 		String firstName = sc.nextLine();
 		System.out.println("Enter last Name: ");
@@ -30,9 +28,9 @@ public class AddressBook {
 		sc.nextLine();
 		System.out.println("Enter your EMail ID: ");
 		String email = sc.nextLine();
-		
-		//calling the set method
-		
+
+		// calling the set method
+
 		contact.setFirstName(firstName);
 		contact.setLastName(lastName);
 		contact.setAddress(address);
@@ -43,4 +41,20 @@ public class AddressBook {
 		contact.setEmail(email);
 		System.out.println(contact);
 	}
+
+	// ability to edit existing contact
+	public void editContact() {
+		System.out.println("Enter First Name of Persion");
+		String editName = sc.nextLine();
+		if (editName.equalsIgnoreCase(contact.firstName)) {
+			add();
+			// System.out.println(contact);
+		} else {
+			System.out.println("Invalid Name......!");
+			System.out.println("Please enter valid First Name");
+			editContact();
+		}
+
+	}
+
 }
