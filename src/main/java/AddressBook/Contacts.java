@@ -11,7 +11,6 @@ public class Contacts {
 	String email;
 	public Contacts(String firstName, String lastName, String address, String city, String state, Long zipCode,
 			Long phoneNumber, String email) {
-		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.address = address;
